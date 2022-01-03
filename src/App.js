@@ -1,6 +1,9 @@
 import './App.css';
-import Profile from './components/Profile';
-import userInformation from './user.json';
+import Profile from './components/Profile/Profile';
+import userInformation from './components/Profile/user.json';
+// import Statistics from './components/Statistics/Statistics';
+// import statisticalData from './components/Statistics/statistics.json';
+
 
 
 function App() {
@@ -14,7 +17,8 @@ function App() {
       views={userInformation.stats.views}
       likes={userInformation.stats.likes}
     />
-    
+    // <Statistics 
+    // />
   );
 }
 
