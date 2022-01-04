@@ -1,0 +1,19 @@
+.description {
+  background-color: white;
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid black;
+}
+.avatar {
+  margin-left: auto;
+}
+.stats {
+  background-color: rgb(190, 217, 224);
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  width: 250px;
+  border: 1px solid black;
+  text-align: center;
+}
