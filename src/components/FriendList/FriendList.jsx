@@ -22,4 +22,5 @@ export const FriendList = (props) => {
 
 // FriendList.PropTypes = {
 //     status: PropTypes.oneOf(['online', 'offline'])
+//     s
 // }
