@@ -1,5 +1,5 @@
 import './Statistics.css'
-
+import randomColor from 'randomcolor';
 
 export const Statistics = (props) => {
     const { stats } = props;
@@ -12,7 +12,7 @@ export const Statistics = (props) => {
       <ul className="stat-list">
         {stats.map(({id, label, percentage}) => {
           return (
-            <li key={id} className="item">
+            <li key={id} style={{backgroundColor:(randomColor())}} className="item">
               <span className="label">{label}</span>
               <span className="percentage">{percentage}%</span>
             </li>
@@ -38,3 +38,7 @@ export const Statistics = (props) => {
     </section> 
   )
 }
+// function generateRandomColor() {
+//   var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+//   return randomColor;
+// }

@@ -1,17 +1,17 @@
 // import PropTypes from 'prop-types';
-import './FriendList.css'
+import s from './FriendList.module.css'
 
 
 export const FriendList = (props) => {
     const { friends } = props;
     return (
-        <ul className="friend-list">
+        <ul className={s.friendlist}>
             {friends.map(({id, avatar, name, isOnline}) => {
                 return (
-                    <li key={id} className="friend-item">
-                        <span className="status">{isOnline}</span>
-                        <img className="avatar" src={avatar} alt={name} width="48" />
-                        <p className="name">{name}</p>
+                    <li key={id} className={s.frienditem}>
+                        <span className={ isOnline ? s.online : s.offline}></span>
+                        <img className={s.avatar} src={avatar} alt={name} width="48" />
+                        <p className={s.name}>{name}</p>
                     </li>
                 )
             })}
@@ -20,7 +20,7 @@ export const FriendList = (props) => {
 }
 
 
-// FriendList.PropTypes = {
-//     status: PropTypes.oneOf(['online', 'offline'])
-//     
-// }
+// {isOnline}=true ? "online" : "status"
+
+
+

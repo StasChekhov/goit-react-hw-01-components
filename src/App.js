@@ -1,5 +1,5 @@
 import './App.css';
-import { Profile, Statistics, userInformation, statisticalData, FriendList, friends} from './components'
+import { Profile, Statistics, userInformation, statisticalData, FriendList, friends, TransactionHistory, transactions } from './components'
 // import userInformation from './components/Profile/user.json';
 // import statisticalData from './components/Statistics/statistical-data.json';
 // import Profile from './components/Profile/Profile';
@@ -32,9 +32,12 @@ function App() {
       
       <FriendList
         friends={friends}
-        status="offline"
+        
       />
 
+      <TransactionHistory
+        items={transactions}
+      />
     </div>
   );
 }

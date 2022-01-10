@@ -2,7 +2,7 @@
 export { Profile, userInformation } from './Profile'
 export { Statistics, statisticalData } from './Statistics'
 export { FriendList, friends } from './FriendList'
-
+export { TransactionHistory, transactions } from './TransactionHistory'
 
 // вот это то же самое что сверху
 // import { Profile, userInformation } from './Profile';
