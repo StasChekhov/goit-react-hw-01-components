@@ -16,13 +16,15 @@ function App() {
         tag={userInformation.tag}
         location={userInformation.location}
         avatar={userInformation.avatar}
-        followers={userInformation.stats.followers}
-        views={userInformation.stats.views}
-        likes={userInformation.stats.likes}
+        stats={userInformation.stats}
+        // followers={userInformation.stats.followers}
+        // views={userInformation.stats.views}
+        // likes={userInformation.stats.likes}
       />
       <Statistics
         // будем этот проп юзать
         stats={statisticalData}
+        title="Upload stats" stats={statisticalData}
         // тут ключ в целом не нужен но по идее он ничего не должен ломать
         // тут
         // label={statisticalData[0].label}

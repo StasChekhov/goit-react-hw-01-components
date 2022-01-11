@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import s from './FriendList.module.css'
 
 
@@ -19,6 +19,16 @@ export const FriendList = (props) => {
     );
 }
 
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.any.isRequired,
+      name: PropTypes.any.isRequired,
+      isOnline: PropTypes.any.isRequired,
+    }),
+  ),
+};
 
 // {isOnline}=true ? "online" : "status"
 

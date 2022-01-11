@@ -1,4 +1,5 @@
-import './Statistics.css'
+import PropTypes from 'prop-types';
+import s from './Statistics.module.css'
 import randomColor from 'randomcolor';
 
 export const Statistics = (props) => {
@@ -6,39 +7,34 @@ export const Statistics = (props) => {
 
     // тут статс это массив тот что в джсон
     return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+    <section className={s.statistics}>
+      <h2 className={s.title}>Upload stats</h2>
 
-      <ul className="stat-list">
+      <ul className={s.statlist}>
         {stats.map(({id, label, percentage}) => {
           return (
-            <li key={id} style={{backgroundColor:(randomColor())}} className="item">
-              <span className="label">{label}</span>
-              <span className="percentage">{percentage}%</span>
+            <li key={id} style={{backgroundColor:(randomColor())}} className={s.item}>
+              <span className={s.label}>{label}</span>
+              <span className={s.percentage}>{percentage}%</span>
             </li>
           )
         })}
-        {/* <li className="item">
-          <span className="label">{label}</span>
-          <span className="percentage">{percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">.{label}</span>
-          <span className="percentage">{percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">.{label}</span>
-          <span className="percentage">{percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">.{label}</span>
-          <span className="percentage">{percentage}</span>
-        </li> */}
       </ul>
     </section> 
   )
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.any.isRequired,
+      percent: PropTypes.any.isRequired,
+    }),
+  ),
+}
 // function generateRandomColor() {
 //   var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
 //   return randomColor;
-// }
+// 
