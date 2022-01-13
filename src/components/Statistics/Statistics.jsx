@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import s from './Statistics.module.css'
 import randomColor from 'randomcolor';
 
-export const Statistics = (props) => {
-    const { stats } = props;
+export const Statistics = ({stats, title}) => {
+    // const { stats } = props;
 
     // тут статс это массив тот что в джсон
     return (
     <section className={s.statistics}>
-      <h2 className={s.title}>Upload stats</h2>
+      {title && <h2 className={s.title}>{title}</h2>}
 
       <ul className={s.statlist}>
         {stats.map(({id, label, percentage}) => {

@@ -23,7 +23,6 @@ function App() {
       />
       <Statistics
         // будем этот проп юзать
-        stats={statisticalData}
         title="Upload stats" stats={statisticalData}
         // тут ключ в целом не нужен но по идее он ничего не должен ломать
         // тут
