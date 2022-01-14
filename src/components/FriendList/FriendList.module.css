@@ -1,8 +1,9 @@
 .friendlist {
-  margin-top: 30px;
   text-align: center;
   width: 160px;
   margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 .frienditem {
   background-color: white;
